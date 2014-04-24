@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pages/contact'
+
   root 'static#page'
 
   get 'static/home'
