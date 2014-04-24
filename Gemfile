@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
 
+
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 # Use sqlite3 as the database for Active Record
@@ -14,6 +17,14 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 gem 'rspec'
 
+
+group :production do
+	gem 'pg'
+end
+
+group :development, :test do
+	gem 'sqlite3'
+end
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -29,9 +40,7 @@ gem 'spring',        group: :development
 gem 'rspec-rails'
 
 
-group :development, :test do
-  gem 'sqlite3'
-end
+
 
 
 # Use ActiveModel has_secure_password
